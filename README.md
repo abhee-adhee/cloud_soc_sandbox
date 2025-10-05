@@ -1,92 +1,65 @@
-🛡️ Cybersecurity SOC Simulation Project
+# 🛡️ Cloud Security Sandbox — Mini SOC for Learners
 
-A hands-on cybersecurity project focused on building a mini Security Operations Center (SOC) using a vulnerable web environment and monitoring simulated attacks in a controlled Ubuntu setup.
+**_A hands-on Security Operations Center (SOC) lab for students & enthusiasts — simulate attacks, detect them, and practice response._**
 
-🔍 Project Overview
+---
 
-This project demonstrates how a SOC detects, analyzes, and mitigates web-based attacks using simulated vulnerable systems like DVWA (Damn Vulnerable Web Application) and custom web servers.
-It aims to replicate a simplified real-world cybersecurity environment.
+## ▶️ Project Snapshot
+- **Purpose:** Provide a safe, reproducible environment to learn offensive and defensive web security (DVWA, Juice Shop).  
+- **Deliverable:** Docker-ready sandbox + detection rules + dashboards + demo scripts.  
+- **Audience:** Beginners to intermediate students who want practical SOC experience.
 
-🧩 Objectives
+---
 
-Create a secure lab using Ubuntu Server
+## 📌 Highlights
+- Run intentionally vulnerable apps (DVWA, Juice Shop) on an Ubuntu target VM.  
+- Simulate attacks from an attacker VM (Parrot/Kali).  
+- Collect logs (Filebeat / Docker logs) → store in OpenSearch/Elasticsearch.  
+- Visualize & alert with Grafana / Kibana; notify via Telegram/Slack.
 
-Deploy two web applications (Site 1 & Site 2)
+---
 
-Host DVWA for vulnerability testing
+## 🧭 Tech Stack (concise)
 
-Perform simulated web attacks and log monitoring
+| Layer | Tools / Examples |
+|---|---|
+| OS / VMs | Ubuntu 24.04 (target), Parrot/Kali (attacker) |
+| Vulnerable Apps | DVWA, OWASP Juice Shop |
+| Logging | Filebeat (or simple log-forwarder) |
+| Storage / SIEM | OpenSearch / Elasticsearch |
+| Visualization | Kibana, Grafana |
+| Network IDS (optional) | Suricata / Snort |
+| Scripting | Python, Bash |
+| Containerization | Docker / docker-compose |
+| Alerts | Telegram Bot API, Slack Webhooks |
 
-Capture and analyze network traffic
+---
 
-Demonstrate incident detection and alerting
+## 🧪 Typical Lab Workflow
 
-⚙️ Tech Stack
-Category	Tools / Technologies
-Operating System	Ubuntu 24.04.3 LTS
-Web Server	Apache2
-Vulnerable App	DVWA
-Scripting	PHP, JavaScript
-Database	MySQL
-Monitoring Tools	Wireshark, Splunk (optional)
-Security Tools	Nmap, Nikto, Burp Suite
-Containerization (optional)	Docker
-Version Control	Git & GitHub
-🧱 Project Structure
-SOC-Project/
-│
-├── site1/                 # Secure web app (HTTPS)
-├── site2/                 # Second web app for attack simulation
-├── dvwa/                  # Damn Vulnerable Web App setup
-├── scripts/               # Security and attack scripts
-├── logs/                  # Apache & SOC monitoring logs
-├── docker-compose.yml     # (Optional) Dockerized setup
-└── README.md              # Documentation
+-Deploy target VM (Ubuntu) and attacker VM (Parrot).
 
-🚀 Setup Steps
+-Run DVWA / Juice Shop on the target and verify login.
 
-Install Ubuntu 24.04.3 (Desktop or Server)
+-Simulate attacks (nmap, sqlmap, simple XSS, small brute-force).
 
-Set up Apache2, MySQL, and PHP
+-Capture logs with Filebeat → OpenSearch.
 
-Clone this repository
+-Visualize in Kibana/Grafana and configure alert rules.
 
-Host both web applications (site1, site2)
+-Respond (block IP / fail2ban / fix app) and re-test.
 
-Install and configure DVWA
+## 🔒 Safety & Ethics 
 
-Test access using:
+-All testing is performed only on lab-owned VMs. Do not target external machines.
+-If exposing the lab publicly for a demo, use IP allowlists, basic auth, or a temporary tunnel (ngrok) and tear down the instance immediately after demo.
 
-http://localhost → Site 1
+👤 Author
 
-http://<your-ip> → Site 2
+Abinav Aaditya — Computer Science student & cybersecurity enthusiast
+GitHub: https://github.com/abinavaaditya
+https://github.com/abhee-adhee
 
-http://<your-ip>/dvwa → DVWA Vulnerable Site
+## 📝 License
 
-Begin attack simulations and capture logs
-
-📊 Expected Outcomes
-
-Simulated attack & detection pipeline
-
-Understanding of web vulnerabilities
-
-Practical exposure to SOC monitoring
-
-Demonstration-ready setup for academic/project review
-
-🧠 Learning Outcomes
-
-Linux server management
-
-Network traffic analysis
-
-Threat detection methodology
-
-Practical web security knowledge
-
-Basic SOC workflow
-
-
-
-This project is licensed under the MIT License — free to use and modify for educational purposes.
+This project is available under the MIT License. See LICENSE for details.
