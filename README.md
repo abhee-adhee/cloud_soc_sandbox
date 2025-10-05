@@ -1,118 +1,92 @@
-# 🔐 Cloud Security Sandbox: Attack Simulation and Defense for Learners
+🛡️ Cybersecurity SOC Simulation Project
 
-A **Mini Cloud Security Operations Center (SOC)** designed for students and cybersecurity enthusiasts to simulate real-world attacks, detect them, and build custom defensive responses — all in a safe, cost-free environment.
+A hands-on cybersecurity project focused on building a mini Security Operations Center (SOC) using a vulnerable web environment and monitoring simulated attacks in a controlled Ubuntu setup.
 
----
+🔍 Project Overview
 
-## 🚀 Project Overview
+This project demonstrates how a SOC detects, analyzes, and mitigates web-based attacks using simulated vulnerable systems like DVWA (Damn Vulnerable Web Application) and custom web servers.
+It aims to replicate a simplified real-world cybersecurity environment.
 
-Most cloud security tools like AWS GuardDuty or Azure Security Center are enterprise-focused, expensive, and restrictive.  
-This project bridges that gap by offering a lightweight, educational SOC environment where learners can:
+🧩 Objectives
 
-- Host intentionally vulnerable websites (like **DVWA** and **Juice Shop**)  
-- Simulate common web-based attacks (SQLi, XSS, Brute Force)  
-- Collect and analyze security logs  
-- Visualize attack patterns using **Grafana** or **Kibana**  
-- Send real-time alerts through **Telegram**, **Slack**, or **Email**
+Create a secure lab using Ubuntu Server
 
----
+Deploy two web applications (Site 1 & Site 2)
 
-## 🧠 Learning Goals
+Host DVWA for vulnerability testing
 
-- Understand the basics of **offensive and defensive security**
-- Learn how **SOC systems** detect and respond to incidents  
-- Gain hands-on experience with **Docker**, **Linux**, and **web attack simulation**  
-- Visualize threats using open-source tools instead of paid enterprise solutions  
+Perform simulated web attacks and log monitoring
 
----
+Capture and analyze network traffic
 
-## ⚙️ Tools & Technologies
+Demonstrate incident detection and alerting
 
-| Category | Tools Used |
-|-----------|-------------|
-| OS | Ubuntu / Parrot OS |
-| Vulnerable Apps | DVWA, OWASP Juice Shop |
-| Monitoring | Grafana / Kibana |
-| Logging | Elasticsearch / Filebeat |
-| Scripting | Bash, Python |
-| Containerization | Docker, Docker Compose |
-| Communication | Telegram API, Slack Webhooks |
-
----
-
-## 🧩 System Architecture
-
-[ Attacker VM ] → [ Vulnerable Web Apps (DVWA/JuiceShop) ]
-↓
-[ Log Collectors ]
-↓
-[ Elastic Stack / Grafana ]
-↓
-[ Alerts → Telegram / Slack ]
-
-yaml
-Copy code
-
----
-
-## 🧪 Setup (Basic Version)
-
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/<your-username>/cloud-soc-sandbox.git
-   cd cloud-soc-sandbox
-Run the Docker environment
-
-bash
-Copy code
-docker-compose up -d
-Access DVWA in your browser
-
-arduino
-Copy code
-http://localhost
-Monitor alerts & visualization via Grafana
-
-arduino
-Copy code
-http://localhost:3000
-📦 Project Structure
-perl
-Copy code
-cloud-soc-sandbox/
+⚙️ Tech Stack
+Category	Tools / Technologies
+Operating System	Ubuntu 24.04.3 LTS
+Web Server	Apache2
+Vulnerable App	DVWA
+Scripting	PHP, JavaScript
+Database	MySQL
+Monitoring Tools	Wireshark, Splunk (optional)
+Security Tools	Nmap, Nikto, Burp Suite
+Containerization (optional)	Docker
+Version Control	Git & GitHub
+🧱 Project Structure
+SOC-Project/
 │
-├── README.md              # Project overview
-├── .gitignore             # Ignore unnecessary files
-├── docker-compose.yml     # Define web apps + monitoring stack
-├── .env.example           # Environment variables (API keys etc.)
-├── LICENSE                # Open-source license
-│
-├── docs/                  # Diagrams and architecture notes
-│   └── architecture-diagram.png
-│
-└── scripts/               # Automation scripts
-    ├── attack-sim.sh
-    └── log-collector.py
-🎯 Future Improvements
-Add AI-based anomaly detection for smarter alerts
+├── site1/                 # Secure web app (HTTPS)
+├── site2/                 # Second web app for attack simulation
+├── dvwa/                  # Damn Vulnerable Web App setup
+├── scripts/               # Security and attack scripts
+├── logs/                  # Apache & SOC monitoring logs
+├── docker-compose.yml     # (Optional) Dockerized setup
+└── README.md              # Documentation
 
-Integrate external threat intelligence feeds
+🚀 Setup Steps
 
-Deploy the entire setup on a cloud free-tier (AWS / GCP / Azure)
+Install Ubuntu 24.04.3 (Desktop or Server)
+
+Set up Apache2, MySQL, and PHP
+
+Clone this repository
+
+Host both web applications (site1, site2)
+
+Install and configure DVWA
+
+Test access using:
+
+http://localhost → Site 1
+
+http://<your-ip> → Site 2
+
+http://<your-ip>/dvwa → DVWA Vulnerable Site
+
+Begin attack simulations and capture logs
+
+📊 Expected Outcomes
+
+Simulated attack & detection pipeline
+
+Understanding of web vulnerabilities
+
+Practical exposure to SOC monitoring
+
+Demonstration-ready setup for academic/project review
+
+🧠 Learning Outcomes
+
+Linux server management
+
+Network traffic analysis
+
+Threat detection methodology
+
+Practical web security knowledge
+
+Basic SOC workflow
 
 
-📜 License
-This project is licensed under the MIT License.
 
-💬 Acknowledgements
-Special thanks to open-source tools and the cybersecurity learning community that inspired this project.
-
-yaml
-Copy code
-
----
-
-✅ **To use:**
-1. Create a new file:
-   ```bash
-   nano README.md
+This project is licensed under the MIT License — free to use and modify for educational purposes.
