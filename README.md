@@ -37,22 +37,17 @@
 
 ## 🧪 Typical Lab Workflow
 
--Deploy target VM (Ubuntu) and attacker VM (Parrot).
-
--Run DVWA / Juice Shop on the target and verify login.
-
--Simulate attacks (nmap, sqlmap, simple XSS, small brute-force).
-
--Capture logs with Filebeat → OpenSearch.
-
--Visualize in Kibana/Grafana and configure alert rules.
-
--Respond (block IP / fail2ban / fix app) and re-test.
+- Deploy target VM (Ubuntu) and attacker VM (Parrot).
+- Run DVWA / Juice Shop on the target and verify login.
+- Simulate attacks (nmap, sqlmap, simple XSS, small brute-force).
+- Capture logs with Filebeat → OpenSearch.
+- Visualize in Kibana/Grafana and configure alert rules.
+- Respond (block IP / fail2ban / fix app) and re-test.
 
 ## 🔒 Safety & Ethics 
 
--All testing is performed only on lab-owned VMs. Do not target external machines.
--If exposing the lab publicly for a demo, use IP allowlists, basic auth, or a temporary tunnel (ngrok) and tear down the instance immediately after demo.
+- All testing is performed only on lab-owned VMs. Do not target external machines.
+- If exposing the lab publicly for a demo, use IP allowlists, basic auth, or a temporary tunnel (ngrok) and tear down the instance immediately after demo.
 
 ## 👤 Author
 
