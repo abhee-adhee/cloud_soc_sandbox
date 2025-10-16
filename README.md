@@ -49,6 +49,11 @@
 - All testing is performed only on lab-owned VMs. Do not target external machines.
 - If exposing the lab publicly for a demo, use IP allowlists, basic auth, or a temporary tunnel (ngrok) and tear down the instance immediately after demo.
 
+
+## 🐳 Docker Deployment
+
+### DVWA Container
+
 ## 👤 Author
 
 ### Abinav Aaditya — Computer Science student & cybersecurity enthusiast
