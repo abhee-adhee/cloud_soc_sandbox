@@ -1,0 +1,22 @@
+# Sensitive data
+*.pcap
+*.cap
+*password*
+*credentials*
+*.key
+*.pem
+
+# Logs
+logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
