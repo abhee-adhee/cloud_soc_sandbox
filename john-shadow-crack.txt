@@ -1,0 +1,5 @@
+Created directory: /home/adhi/.john
+fopen: /etc/shadow: Permission denied
+Using default input encoding: UTF-8
+No password hashes loaded (see FAQ)
+0 password hashes cracked, 0 left
