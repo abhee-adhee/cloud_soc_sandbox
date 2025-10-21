@@ -110,5 +110,4 @@ This lab is for **educational purposes only**. Only test on systems you own or h
 
 ---
 **Maintained by**: Abinav Aaditya
-**GitHub**: https://github.com/abhee-adhee/kali-pentest-lab
 >>>>>>> e4ac8a5 (Initial commit)
